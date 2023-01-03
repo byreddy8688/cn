@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+void main() {
+    char frame[50];
+    char nframe[100];
+    int j=0;
+    printf("Enter string");
+    gets(frame);
+    nframe[j++]='F';
+    nframe[j++]='L';
+    nframe[j++]='A';
+    nframe[j++]='G';
+    nframe[j++]=' ';
+    for(int i=0;frame[i]!='\0';i++){
+        if(frame[i]=='F'&& frame[i+1]=='L' && frame[i+2]=='A' && frame[i+3]=='G' || frame[i]=='E' && frame[i+1]=='S' && frame[i+2]=='C')
+        {
+        nframe[j++]='E';
+        nframe[j++]='S';
+        nframe[j++]='C';
+        nframe[j++]=' ';
+        }
+        nframe[j++]=frame[i];
+    }
+    nframe[j++]='F';
+    nframe[j++]='L';
+    nframe[j++]='A';
+    nframe[j++]='G';
+    for(int i=0;i<j;i++)printf("%c",nframe[i]);
+}

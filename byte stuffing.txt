@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <conio.h>
+void main() {
+    int n,i;
+    long a[n];
+    int c=0;
+    scanf("%d",&n);
+    printf("Enter values for array");
+    for(i=0;i<n;i++)
+        scanf("%ld ",&a[i]);
+    for(i=0;i<n;i++){
+        if(a[i]==1)c++;
+        else c=0;
+        printf("%ld ",a[i]);
+        if(c==5){
+            c=0;
+            printf("0");
+        }
+    }
+}

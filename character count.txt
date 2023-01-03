@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+void main() {
+    int i=0,f[30],j;
+    char s[100],ch;
+    printf("Enter the string up to '@':");
+    while(1){
+        scanf("%c",&ch);
+        if(ch=='@')break;
+        s[i++]=ch;
+    }
+    int c=0,l=0;
+    for(j=0;j<i;j++){
+        if(s[j]==' '){
+            f[l++]=c;
+            c=0;
+        }else
+            c++;
+    }
+    f[l++]=c;
+    l=0;
+    printf("(%d)",f[l++]);
+    for(j=0;j<i;j++){
+        if(s[j]==' ')
+            printf("(%d)",f[l++]);
+        else
+            printf("%c",s[j]);
+    }
+}
